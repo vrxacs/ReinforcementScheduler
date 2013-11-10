@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<slots>
+	<time id="1">bla</time>
+	<time id="2">ho</time>
+	<time id="3">aa</time>
+</slots>
+<prof>
+	<pr name="A">
+		<slot>1</slot>
+	</pr>
+	<pr name="B">
+		<slot>2</slot>
+		<slot>3</slot>
+	</pr>
+	<pr name="C">
+		<slot>1</slot>
+	</pr>
+</prof>
+<class>
+	<lecture id="1" prof="A"/>
+	<lecture id="2" prof="B"/>
+	<lecture id="3" prof="A"/>
+	<lecture id="4" prof="A"/>
+</class>
+<rooms>
+	<room id="1" name="A"/>
+	<room id="2" name="B"/>
+</rooms>
+</data>

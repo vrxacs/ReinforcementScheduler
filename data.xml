@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<slots>
+		<time id="0">MWF 8:30-9:20</time>
+		<time id="1">MWF 9:30-10:20</time>
+		<time id="2">MWF 10:30-11:20</time>
+		<time id="3">MWF 11:30-12:20</time>
+		<time id="4">MWF 12:30-13:20</time>
+		<time id="5">MWF 13:30-14:20</time>
+		<time id="6">MWF 14:30-15:35</time>
+		<time id="7">MWF 15:55-17:10</time>
+		<time id="8">TH 8:30-9:45</time>
+		<time id="9">TH 9:55-11:10</time>
+		<time id="10">TH 11:20-12:35</time>
+		<time id="11">TH 12:45-14:00</time>
+		<time id="12">TH 14:10-15:25</time>
+		<time id="13">TH 15:35-15:50</time>
+	</slots>
+	<prof>
+		<pr name="Berna L. Massingill">
+			<slot>1</slot>
+		</pr>
+		<pr name="C.J. McCollum">
+		</pr>
+		<pr name="Ruth G. Jungman">
+		</pr>
+		<pr name="Lyn Belisle">
+		</pr>
+		<pr name="Seth Fogarty">
+		</pr>
+		<pr name="Mark C. Lewis">
+		</pr>
+		<pr name="Matthew Hibbs">
+		</pr>
+		<pr name="Maurice L. Eggen">
+		</pr>
+		<pr name="Thomas E. Hicks">
+		</pr>
+		<pr name="J. Paul Myers, Jr.">
+		</pr>
+		<pr name="John E. Howland">
+		</pr>
+		<pr name="Gerald N. Pitts">
+		</pr>
+	</prof>
+	<class>
+		<lecture id= "CSCI-1120-1" name="Low-Level Computing" prof="Berna L. Massingill">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1120-2" name="Low-Level Computing" prof="Berna L. Massingill">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1120-3" name="Low-Level Computing" prof="Berna L. Massingill">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1300-1" name="Essential Info Technology" prof="C.J. McCollum">
+			<pref>1</pref>
+		</lecture>
+		<lecture id= "CSCI-1300-2" name="Essential Info Technology" prof="C.J. McCollum">
+			<pref>1</pref>
+		</lecture>
+		<lecture id= "CSCI-1300-3" name="Essential Info Technology" prof="C.J. McCollum">
+			<pref>1</pref>
+		</lecture>
+		<lecture id= "CSCI-1300-4" name="Essential Info Technology" prof="Ruth G. Jungman">
+			<pref>1</pref>
+		</lecture>
+		<lecture id= "CSCI-1300-5" name="Essential Info Technology" prof="Lyn Belisle">
+			<pref>1</pref>
+		</lecture>
+		<lecture id= "CSCI-1300-6" name="Essential Info Technology" prof="Ruth G. Jungman">
+			<pref>1</pref>
+		</lecture>
+		<lecture id= "CSCI-1300-7" name="Essential Info Technology" prof="Ruth G. Jungman">
+			<pref>1</pref>
+		</lecture>
+		<lecture id= "CSCI-1311-1" name="Intro to Prgrmmng Logic" prof="Seth Fogarty">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1311-2" name="Intro to Prgrmmng Logic" prof="Seth Fogarty">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1320-1" name="Principles of CS I" prof="Mark C. Lewis">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1320-2" name="Principles of CS I" prof="Matthew Hibbs">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1320-3" name="Principles of CS I" prof="Matthew Hibbs">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1320-4" name="Principles of CS I" prof="Mark C. Lewis">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1321-1" name="Principles of CS II" prof="Mark C. Lewis">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1321-2" name="Principles of CS II" prof="Mark C. Lewis">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1321-3" name="Principles of CS II" prof="Maurice L. Eggen">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-1323-1" name="Discrete Structures" prof="Seth Fogarty"/>
+		<lecture id= "CSCI-2094-1" name="Computer Science Seminar" prof="Berna L. Massingill"/>
+		<lecture id= "CSCI-2320-1" name="Principles of Data Abstraction" prof="Thomas E. Hicks">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-2321-1" name="Principles of Computer Design" prof="Berna L. Massingill">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-2322-1" name="Prin of Functional Languages" prof="Mark C. Lewis">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-2324-1" name="Numerical Calculus" prof="Maurice L. Eggen"/>
+		<lecture id= "CSCI-3194-1" name="Seminar" prof="Mark C. Lewis"/>
+		<lecture id= "CSCI-3311-1" name="Info Assurance and Security" prof="J. Paul Myers, Jr."/>
+		<lecture id= "CSCI-3321-1" name="Prin of Software Engineering" prof="Thomas E. Hicks">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-3323-1" name="Prin of Operating Systems" prof="Berna L. Massingill">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+		<lecture id= "CSCI-3361-1" name="Analysis of Algorithms" prof="J. Paul Myers, Jr."/>
+		<lecture id= "CSCI-3394-1" name="Seminar" prof="John E. Howland"/>
+		<lecture id= "CSCI-4365-1" name="Adv Theoretical Computer Sci" prof="J. Paul Myers, Jr."/>
+		<lecture id= "CSCI-4386-1" name="Senior Software Project II" prof="Thomas E. Hicks">
+			<pref>2</pref>
+			<pref>3</pref>
+		</lecture>
+	</class>
+	<rooms>
+		<room id="0" name="HAS 340"/>
+		<room id="1" name="HAS 227"/>
+		<room id="2" name="HAS 228"/>
+		<room id="3" name="Other Room"/>
+	</rooms>
+</data>
