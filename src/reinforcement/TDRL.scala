@@ -47,13 +47,11 @@ class TDRL(var schedule : Schedule) {
     }
     
     def checkHistory(s : Schedule, old : Schedule) : Boolean = {
-      //var size = 2
       var ret = true;
       for(i <- 0 until history.size){
       
     	 if(s.roomSlotsEquals(history(i)) &&
     	      (i > 0 && old.roomSlotsEquals(history(i-1))))
-        //if(s.roomSlotsEquals(history(i)))
     		  ret = false
       }  
       ret

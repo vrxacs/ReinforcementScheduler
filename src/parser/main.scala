@@ -57,7 +57,7 @@ object main {
     ls.reverse.map(p => (p.id -> p)).toMap
   }
   
-  def getProfs(xml: scala.xml.NodeSeq) : HashMap[String, List[Int]] ={
+  def getProfs(xml: scala.xml.NodeSeq) : HashMap[String, List[Int]] = {
     val map = new HashMap[String, List[Int]]
     
     for(l <- (xml \\ "pr")){

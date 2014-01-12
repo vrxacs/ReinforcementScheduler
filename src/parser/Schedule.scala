@@ -83,11 +83,8 @@ class Schedule(val slots: Array[Slot], val rooms : Array[Room],
 	  
 	  def findProfConflictHelper(pID: String) : List[(Int, Slot)] = {
 	    var t = List[(Int, Slot)]()
-	   
-	    val temp = for((r, a) <- roomSlots; 
-	    			s <- a if (s.classID.size > 0 && // if ID is not null
-	    					classes(s.classID).prof == pID)) // if it's the same prof
-	    			  yield (r, s)
+	    
+	    val temp = getProfRoomSlots(pID);
 	    
 	    // check whether a professor has multiple classes at the same time
 	    // TODO: figure out a more elegant solution, 
@@ -112,12 +109,46 @@ class Schedule(val slots: Array[Slot], val rooms : Array[Room],
 	
 	def getFreeSlots = for((r, a) <- roomSlots; s <- a if(s.classID.size == 0)) yield (r, s)
 	
-	// TODO: think of different metrics
-	// 1. number of conflicts (1 input) - check
-	// 2. average room preference (S) (1 input) - check
-	// 3. room density (rooms.size inputs) - check
+	// TODO: Use these additional metrics
+	// 1. number of conflicts (1 input)
+	// 2. average room preference (S) (1 input)
+	// 3. room density (rooms.size inputs)
 	// 4. number of prof collisions per slot (slots.size inputs)
 	// 5. number of preference collisions per room (rooms.size inputs)
+	
+	// Number of time preference collisions per room, returns room.size outputs
+	def prefCollisions: Array[Double] = {
+	  var temp = new Array[Double](rooms.size)
+	  
+	  for((r, sl) <- getRoomSlots; s <- sl)
+	    if(s.classID != "" && !classes(s.classID).prefs.contains(s.id))
+	      temp(r) += 1
+	  
+	  temp
+	}
+	
+	// Number of professor collisions per slot, returns slots.size Doubles
+	def profCollisions: Array[Double] = {
+	  var temp = new Array[Double](slots.size)
+	  var count = 0
+	  
+	  for(pID <- profs.keys){
+	    
+		  var profRoomSlots =  getProfRoomSlots(pID)
+		  
+		  // TODO: refactor this in all the places it's used
+		  // - move it out to a function that gets an anonymous function as an input
+		  // - have a list of encountered professors, check whether there's a duplicate, if not add prof to list
+		  // if there is, add to collision count
+		  for( (r, Slot(i, time, classID)) <- profRoomSlots)
+			  profRoomSlots.foreach(s => if(s._2.id == i && s._1 != r) temp(i) += 1)
+		  
+	  }
+	    
+	  temp
+	}
+	
+	// Calculates the scheduling density of all rooms, returns rooms.size outputs
 	def roomDensity : Array[Double] = {
 	  var temp = new Array[Double](rooms.size)
 	  var count = 0
@@ -149,6 +180,7 @@ class Schedule(val slots: Array[Slot], val rooms : Array[Room],
 	  c
 	}
 	
+	// Finds conflicts related to professors' room preference
 	def findRoomPrefConflicts : Int = {
 	  var c = 0
 	  
@@ -167,10 +199,7 @@ class Schedule(val slots: Array[Slot], val rooms : Array[Room],
 	  def findProfConflictHelper(pID: String) : Int = {
 	    var t = 0
 	   
-	    val temp = for((r, a) <- roomSlots; 
-	    			s <- a if (s.classID.size > 0 && // if ID is not null
-	    					classes(s.classID).prof == pID)) // if it's the same prof
-	    			  yield (r, s)
+	    val temp = getProfRoomSlots(pID);
 	    
 	    // check whether a professor has multiple classes at the same time
 	    // TODO: figure out a more elegant solution, 
@@ -191,6 +220,12 @@ class Schedule(val slots: Array[Slot], val rooms : Array[Room],
 	  
 	  i
 	}
+	
+	def getProfRoomSlots(pID: String) = 
+	  for((r, a) <- roomSlots;
+		   s <- a if (s.classID.size > 0 && // if ID is not null
+	    			  classes(s.classID).prof == pID)) // if it's the same prof
+	    			  	yield (r, s)
 	
 	def getRoomSlots = for(r <- rooms) yield (r.id, copySlots)
 	
